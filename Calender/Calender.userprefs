@@ -1,0 +1,17 @@
+﻿<Properties StartupConfiguration="{C7B1D700-A04B-4374-AF60-93B37AFB2D7C}|Default">
+  <MonoDevelop.Ide.ItemProperties.Calender.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.B98925D3-94F6-4049-9C96-700892F70C03" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Calender/Views/CalenderView.xaml.cs">
+    <Files>
+      <File FileName="Calender/DateViewModel.cs" Line="46" Column="4" />
+      <File FileName="Calender/CalenderPage.xaml.cs" Line="18" Column="1" />
+      <File FileName="Calender/Views/CalenderView.xaml.cs" Line="132" Column="37" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Calender.Droid PreferredExecutionTarget="Android.N6_6_23" />
+</Properties>

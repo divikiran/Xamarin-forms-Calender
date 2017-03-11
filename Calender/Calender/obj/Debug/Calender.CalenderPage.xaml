@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:local="clr-namespace:Calender" 
+	xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms" x:Class="Calender.CalenderPage">
+	<local:CalenderView HorizontalOptions="FillAndExpand" VerticalOptions="Start" Padding="5" />
+</ContentPage>

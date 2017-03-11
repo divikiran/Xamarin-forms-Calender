@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Calender" x:Class="Calender.CalenderView">
+	<ContentView.Content>
+		<!--<Grid x:Name="CalenderViewControl">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="*" />
+			</Grid.ColumnDefinitions>-->
+			
+			<!--<local:DataLabel Grid.Row="0" Grid.Column="0" />
+			<local:DataLabel Grid.Row="0" Grid.Column="1" />
+			<local:DataLabel Grid.Row="0" Grid.Column="2" />
+			<local:DataLabel Grid.Row="0" Grid.Column="3" />
+			<local:DataLabel Grid.Row="0" Grid.Column="4" />
+			<local:DataLabel Grid.Row="0" Grid.Column="5" />
+			<local:DataLabel Grid.Row="0" Grid.Column="6" />
+			<local:DataLabel Grid.Row="1" Grid.Column="0" />
+			<local:DataLabel Grid.Row="1" Grid.Column="1" />
+			<local:DataLabel Grid.Row="1" Grid.Column="2" />
+			<local:DataLabel Grid.Row="1" Grid.Column="3" />
+			<local:DataLabel Grid.Row="1" Grid.Column="4" />
+			<local:DataLabel Grid.Row="1" Grid.Column="5" />
+			<local:DataLabel Grid.Row="1" Grid.Column="6" />
+			<local:DataLabel Grid.Row="2" Grid.Column="0" />
+			<local:DataLabel Grid.Row="2" Grid.Column="1" />
+			<local:DataLabel Grid.Row="2" Grid.Column="2" />
+			<local:DataLabel Grid.Row="2" Grid.Column="3" />
+			<local:DataLabel Grid.Row="2" Grid.Column="4" />
+			<local:DataLabel Grid.Row="2" Grid.Column="5" />
+			<local:DataLabel Grid.Row="2" Grid.Column="6" />
+			<local:DataLabel Grid.Row="3" Grid.Column="0" />
+			<local:DataLabel Grid.Row="3" Grid.Column="1" />
+			<local:DataLabel Grid.Row="3" Grid.Column="2" />
+			<local:DataLabel Grid.Row="3" Grid.Column="3" />
+			<local:DataLabel Grid.Row="3" Grid.Column="4" />
+			<local:DataLabel Grid.Row="3" Grid.Column="5" />
+			<local:DataLabel Grid.Row="3" Grid.Column="6" />
+			<local:DataLabel Grid.Row="4" Grid.Column="0" />
+			<local:DataLabel Grid.Row="4" Grid.Column="1" />
+			<local:DataLabel Grid.Row="4" Grid.Column="2" />
+			<local:DataLabel Grid.Row="4" Grid.Column="3" />
+			<local:DataLabel Grid.Row="4" Grid.Column="4" />
+			<local:DataLabel Grid.Row="4" Grid.Column="5" />
+			<local:DataLabel Grid.Row="4" Grid.Column="6" />-->
+		<!--</Grid>-->
+	</ContentView.Content>
+</ContentView>
