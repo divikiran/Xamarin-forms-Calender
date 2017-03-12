@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace Calender
 {
@@ -25,18 +28,49 @@ namespace Calender
 		}
 
 
-		ObservableCollection<string> _names;
-		public ObservableCollection<string> Names
+		//ObservableCollection<string> _names;
+		//public ObservableCollection<string> Names
+		//{
+		//	get
+		//	{
+		//		return _names;
+		//	}
+
+		//	set
+		//	{
+		//		_names = value;
+		//		RaisePropertyChanged("Names");
+		//	}
+		//}
+
+
+		public ICommand DateSelected
 		{
 			get
 			{
-				return _names;
+				return new Command(SelectedDateAction);
+			}
+		}
+
+		int i = 0;
+		public void SelectedDateAction(object obj)
+		{
+			var date = Convert.ToDateTime(obj);
+			DateToShow = date.ToString("D");
+		}
+
+		string _dateToShow;
+		public string DateToShow
+		{
+			get
+			{
+				return _dateToShow;
 			}
 
 			set
 			{
-				_names = value;
-				RaisePropertyChanged("Names");
+				_dateToShow = value;
+				RaisePropertyChanged("DateToShow");
 			}
 		}
 

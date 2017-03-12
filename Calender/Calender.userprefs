@@ -2,11 +2,8 @@
   <MonoDevelop.Ide.ItemProperties.Calender.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.B98925D3-94F6-4049-9C96-700892F70C03" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Calender/Views/CalenderView.xaml.cs">
     <Files>
-      <File FileName="Calender/DateViewModel.cs" Line="46" Column="4" />
-      <File FileName="Calender/CalenderPage.xaml.cs" Line="18" Column="1" />
-      <File FileName="Calender/Views/CalenderView.xaml.cs" Line="115" Column="15" />
-      <File FileName="Calender/GestureFrame.cs" Line="31" Column="1" />
-      <File FileName="Droid/GestureFrameRenderer.cs" Line="59" Column="1" />
+      <File FileName="Calender/DateViewModel.cs" Line="60" Column="4" />
+      <File FileName="Calender/Views/CalenderView.xaml.cs" Line="242" Column="17" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
@@ -16,8 +13,10 @@
       <Breakpoint enabled="false" file="/Users/neuuser/Documents/GitHubAll/CalenderControl/Calender/Droid/GestureFrameRenderer.cs" relfile="Droid/GestureFrameRenderer.cs" line="59" column="1" />
       <Breakpoint enabled="false" file="/Users/neuuser/Documents/GitHubAll/CalenderControl/Calender/Calender/GestureFrame.cs" relfile="Calender/GestureFrame.cs" line="31" column="1" />
       <Breakpoint enabled="false" file="/Users/neuuser/Documents/GitHubAll/CalenderControl/Calender/Calender/GestureFrame.cs" relfile="Calender/GestureFrame.cs" line="37" column="1" />
-      <Breakpoint enabled="false" file="/Users/neuuser/Documents/GitHubAll/CalenderControl/Calender/Calender/Views/CalenderView.xaml.cs" relfile="Calender/Views/CalenderView.xaml.cs" line="23" column="1" />
       <Breakpoint enabled="false" file="/Users/neuuser/Documents/GitHubAll/CalenderControl/Calender/Calender/Views/CalenderView.xaml.cs" relfile="Calender/Views/CalenderView.xaml.cs" line="39" column="1" />
+      <Breakpoint enabled="false" file="/Users/neuuser/Documents/GitHubAll/CalenderControl/Calender/Calender/Views/CalenderView.xaml.cs" relfile="Calender/Views/CalenderView.xaml.cs" line="55" column="1" />
+      <Breakpoint file="/Users/neuuser/Documents/GitHubAll/CalenderControl/Calender/Calender/DateViewModel.cs" relfile="Calender/DateViewModel.cs" line="57" column="1" />
+      <Breakpoint file="/Users/neuuser/Documents/GitHubAll/CalenderControl/Calender/Calender/Views/CalenderView.xaml.cs" relfile="Calender/Views/CalenderView.xaml.cs" line="247" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

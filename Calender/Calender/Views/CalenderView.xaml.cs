@@ -1,12 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace Calender
 {
 	public partial class CalenderView : ContentView
 	{
+
+		//public static BindableProperty ItemSelectedCommandProperty = 
+		//BindableProperty.Create(nameof(ItemSelectedCommand), null, typeof(CalenderView));
+
+		public static BindableProperty ItemSelectedCommandProperty =
+		   BindableProperty.Create<CalenderView, ICommand>(
+			  x => x.ItemSelectedCommand, null);
+		
+		public ICommand ItemSelectedCommand
+		{
+			get { return (ICommand)GetValue(ItemSelectedCommandProperty); }
+			set { SetValue(ItemSelectedCommandProperty, value); }
+		}
+
+
 		public DateTime CurrentDate { get; private set; }
 
 		public int CurrentMonth { get; private set; }
@@ -67,6 +83,8 @@ namespace Calender
 		public CalenderView()
 		{
 			InitializeComponent();
+
+
 
 			gi = new GestureFrame
 			{
@@ -225,6 +243,14 @@ namespace Calender
 
 					stack = new StackLayout() { BackgroundColor = CurrentDay == day ? Color.FromHex("bf3122") : Color.White, HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand };
 					stack.Children.Add(dateLabel);
+
+					if (startDaySelected && day <= CurrentNoOfDaysInAMonth)
+					{
+						TapGestureRecognizer dateTap = new TapGestureRecognizer();
+						dateTap.SetBinding(TapGestureRecognizer.CommandProperty, "DateSelected");
+						dateTap.CommandParameter = new DateTime(CurrentYear, CurrentMonth, day);
+						stack.GestureRecognizers.Add(dateTap);
+					}	
 
 					CalenderViewControl.Children.Add(stack, j, i);
 				}

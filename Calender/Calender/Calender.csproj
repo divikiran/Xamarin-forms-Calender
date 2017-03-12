@@ -50,6 +50,7 @@
       <DependentUpon>CalenderView.xaml</DependentUpon>
     </Compile>
     <Compile Include="GestureFrame.cs" />
+    <Compile Include="HomePage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">

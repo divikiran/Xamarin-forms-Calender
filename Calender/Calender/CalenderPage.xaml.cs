@@ -24,11 +24,11 @@ namespace Calender
 		{
 			base.OnAppearing();
 			//ViewModel.DateText = DateTime.Now.ToString("D");
-			ViewModel.Names = new ObservableCollection<string>();
-			for (int i = 0; i < 30; i++)
-			{
-				ViewModel.Names.Add("D " + i);
-			}
+			//ViewModel.Names = new ObservableCollection<string>();
+			//for (int i = 0; i < 30; i++)
+			//{
+			//	ViewModel.Names.Add("D " + i);
+			//}
 		}
 	}
 }
