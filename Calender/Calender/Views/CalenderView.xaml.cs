@@ -9,12 +9,8 @@ namespace Calender
 	public partial class CalenderView : ContentView
 	{
 
-		//public static BindableProperty ItemSelectedCommandProperty = 
-		//BindableProperty.Create(nameof(ItemSelectedCommand), null, typeof(CalenderView));
-
-		public static BindableProperty ItemSelectedCommandProperty =
-		   BindableProperty.Create<CalenderView, ICommand>(
-			  x => x.ItemSelectedCommand, null);
+		public static BindableProperty ItemSelectedCommandProperty = 
+			BindableProperty.Create(nameof(ItemSelectedCommand), typeof(ICommand), typeof(CalenderView),null);
 		
 		public ICommand ItemSelectedCommand
 		{
@@ -83,8 +79,6 @@ namespace Calender
 		public CalenderView()
 		{
 			InitializeComponent();
-
-
 
 			gi = new GestureFrame
 			{
@@ -247,8 +241,17 @@ namespace Calender
 					if (startDaySelected && day <= CurrentNoOfDaysInAMonth)
 					{
 						TapGestureRecognizer dateTap = new TapGestureRecognizer();
-						dateTap.SetBinding(TapGestureRecognizer.CommandProperty, "DateSelected");
-						dateTap.CommandParameter = new DateTime(CurrentYear, CurrentMonth, day);
+						var dateTime = new DateTime(CurrentYear, CurrentMonth, day);
+						//dateTap.SetBinding(TapGestureRecognizer.CommandProperty, "DateSelected");
+						dateTap.Tapped += (sender, e) => {
+							if (ItemSelectedCommand != null && ItemSelectedCommand.CanExecute(null))
+							{
+								ItemSelectedCommand.Execute(dateTime);
+							}
+						};
+
+
+						dateTap.CommandParameter = dateTime;
 						stack.GestureRecognizers.Add(dateTap);
 					}	
 

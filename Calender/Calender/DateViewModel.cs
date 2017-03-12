@@ -27,23 +27,6 @@ namespace Calender
 			}
 		}
 
-
-		//ObservableCollection<string> _names;
-		//public ObservableCollection<string> Names
-		//{
-		//	get
-		//	{
-		//		return _names;
-		//	}
-
-		//	set
-		//	{
-		//		_names = value;
-		//		RaisePropertyChanged("Names");
-		//	}
-		//}
-
-
 		public ICommand DateSelected
 		{
 			get
