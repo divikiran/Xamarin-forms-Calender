@@ -2,9 +2,9 @@
 # [first argument, ignore] # /Library/Frameworks/Xamarin.iOS.framework/Versions/10.4.0.123/lib/mtouch/mtouch.exe
 /Library/Frameworks/Xamarin.iOS.framework/Versions/10.4.0.123/lib/mtouch/mtouch.exe \
 	--cache \
-	/Users/neuuser/Projects/Calender/iOS/obj/iPhoneSimulator/Debug/mtouch-cache \
+	/Users/neuuser/Documents/GitHubAll/CalenderControl/Calender/iOS/obj/iPhoneSimulator/Debug/mtouch-cache \
 	--sim \
-	/Users/neuuser/Projects/Calender/iOS/bin/iPhoneSimulator/Debug/Calender.iOS.app \
+	/Users/neuuser/Documents/GitHubAll/CalenderControl/Calender/iOS/bin/iPhoneSimulator/Debug/Calender.iOS.app \
 	--executable \
 	Calender.iOS \
 	--fastdev \
@@ -20,7 +20,7 @@
 	--tls-provider=default \
 	--abi=x86_64 \
 	--symbollist \
-	/Users/neuuser/Projects/Calender/iOS/obj/iPhoneSimulator/Debug/mtouch-symbols.list \
+	/Users/neuuser/Documents/GitHubAll/CalenderControl/Calender/iOS/obj/iPhoneSimulator/Debug/mtouch-symbols.list \
 	--dsym=no \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.dll \
@@ -31,15 +31,15 @@
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Xamarin.iOS.dll \
 	-r \
-	/Users/neuuser/Projects/Calender/packages/Xamarin.Forms.2.3.3.193/lib/Xamarin.iOS10/Xamarin.Forms.Core.dll \
+	/Users/neuuser/Documents/GitHubAll/CalenderControl/Calender/packages/Xamarin.Forms.2.3.3.193/lib/Xamarin.iOS10/Xamarin.Forms.Core.dll \
 	-r \
-	/Users/neuuser/Projects/Calender/packages/Xamarin.Forms.2.3.3.193/lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll \
+	/Users/neuuser/Documents/GitHubAll/CalenderControl/Calender/packages/Xamarin.Forms.2.3.3.193/lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll \
 	-r \
-	/Users/neuuser/Projects/Calender/packages/Xamarin.Forms.2.3.3.193/lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll \
+	/Users/neuuser/Documents/GitHubAll/CalenderControl/Calender/packages/Xamarin.Forms.2.3.3.193/lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll \
 	-r \
-	/Users/neuuser/Projects/Calender/packages/Xamarin.Forms.2.3.3.193/lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll \
+	/Users/neuuser/Documents/GitHubAll/CalenderControl/Calender/packages/Xamarin.Forms.2.3.3.193/lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll \
 	-r \
-	/Users/neuuser/Projects/Calender/Calender/bin/Debug/Calender.dll \
+	/Users/neuuser/Documents/GitHubAll/CalenderControl/Calender/Calender/bin/Debug/Calender.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/mscorlib.dll \
 	-r \
@@ -305,15 +305,15 @@
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Xml.Xsl.Primitives.dll \
 	-r \
-	/Users/neuuser/Projects/Calender/packages/Xamarin.Forms.2.3.3.193/lib/Xamarin.iOS10/Xamarin.Forms.Core.dll \
+	/Users/neuuser/Documents/GitHubAll/CalenderControl/Calender/packages/Xamarin.Forms.2.3.3.193/lib/Xamarin.iOS10/Xamarin.Forms.Core.dll \
 	-r \
-	/Users/neuuser/Projects/Calender/packages/Xamarin.Forms.2.3.3.193/lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll \
+	/Users/neuuser/Documents/GitHubAll/CalenderControl/Calender/packages/Xamarin.Forms.2.3.3.193/lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll \
 	-r \
-	/Users/neuuser/Projects/Calender/packages/Xamarin.Forms.2.3.3.193/lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll \
+	/Users/neuuser/Documents/GitHubAll/CalenderControl/Calender/packages/Xamarin.Forms.2.3.3.193/lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll \
 	-r \
-	/Users/neuuser/Projects/Calender/packages/Xamarin.Forms.2.3.3.193/lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll \
+	/Users/neuuser/Documents/GitHubAll/CalenderControl/Calender/packages/Xamarin.Forms.2.3.3.193/lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll \
 	-r \
-	/Users/neuuser/Projects/Calender/Calender/bin/Debug/Calender.dll \
+	/Users/neuuser/Documents/GitHubAll/CalenderControl/Calender/Calender/bin/Debug/Calender.dll \
 	--target-framework \
 	"Xamarin.iOS,v1.0" \
-	/Users/neuuser/Projects/Calender/iOS/bin/iPhoneSimulator/Debug//Calender.iOS.exe \
+	/Users/neuuser/Documents/GitHubAll/CalenderControl/Calender/iOS/bin/iPhoneSimulator/Debug//Calender.iOS.exe \

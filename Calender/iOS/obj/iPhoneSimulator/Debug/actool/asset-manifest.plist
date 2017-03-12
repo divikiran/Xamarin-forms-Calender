@@ -6,7 +6,8 @@
 	<dict>
 		<key>output-files</key>
 		<array>
-			<string>/Users/neuuser/Projects/Calender/iOS/obj/iPhoneSimulator/Debug/actool/partial-info.plist</string>
+			<string>/Users/neuuser/Documents/GitHubAll/CalenderControl/Calender/iOS/obj/iPhoneSimulator/Debug/actool/bundle/Assets.car</string>
+			<string>/Users/neuuser/Documents/GitHubAll/CalenderControl/Calender/iOS/obj/iPhoneSimulator/Debug/actool/partial-info.plist</string>
 		</array>
 	</dict>
 </dict>

@@ -4,14 +4,23 @@
     <Files>
       <File FileName="Calender/DateViewModel.cs" Line="46" Column="4" />
       <File FileName="Calender/CalenderPage.xaml.cs" Line="18" Column="1" />
-      <File FileName="Calender/Views/CalenderView.xaml.cs" Line="132" Column="37" />
+      <File FileName="Calender/Views/CalenderView.xaml.cs" Line="115" Column="15" />
+      <File FileName="Calender/GestureFrame.cs" Line="31" Column="1" />
+      <File FileName="Droid/GestureFrameRenderer.cs" Line="59" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint enabled="false" file="/Users/neuuser/Documents/GitHubAll/CalenderControl/Calender/Droid/GestureFrameRenderer.cs" relfile="Droid/GestureFrameRenderer.cs" line="65" column="1" />
+      <Breakpoint enabled="false" file="/Users/neuuser/Documents/GitHubAll/CalenderControl/Calender/Droid/GestureFrameRenderer.cs" relfile="Droid/GestureFrameRenderer.cs" line="59" column="1" />
+      <Breakpoint enabled="false" file="/Users/neuuser/Documents/GitHubAll/CalenderControl/Calender/Calender/GestureFrame.cs" relfile="Calender/GestureFrame.cs" line="31" column="1" />
+      <Breakpoint enabled="false" file="/Users/neuuser/Documents/GitHubAll/CalenderControl/Calender/Calender/GestureFrame.cs" relfile="Calender/GestureFrame.cs" line="37" column="1" />
+      <Breakpoint enabled="false" file="/Users/neuuser/Documents/GitHubAll/CalenderControl/Calender/Calender/Views/CalenderView.xaml.cs" relfile="Calender/Views/CalenderView.xaml.cs" line="23" column="1" />
+      <Breakpoint enabled="false" file="/Users/neuuser/Documents/GitHubAll/CalenderControl/Calender/Calender/Views/CalenderView.xaml.cs" relfile="Calender/Views/CalenderView.xaml.cs" line="39" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Calender.Droid PreferredExecutionTarget="Android.N6_6_23" />
+  <MonoDevelop.Ide.ItemProperties.Calender.Droid PreferredExecutionTarget="Android.emulator-5554" />
 </Properties>

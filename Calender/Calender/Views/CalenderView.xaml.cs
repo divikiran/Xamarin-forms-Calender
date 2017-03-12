@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using Xamarin.Forms;
 
 namespace Calender
@@ -67,14 +68,10 @@ namespace Calender
 		{
 			InitializeComponent();
 
-			//this.HorizontalOptions = LayoutOptions.Start;
-			//this.VerticalOptions = LayoutOptions.Start;
-
 			gi = new GestureFrame
 			{
-				//HorizontalOptions = LayoutOptions.FillAndExpand,
-				//VerticalOptions = LayoutOptions.Start,
-				BackgroundColor = Color.FromHex("bf3122"),
+				HorizontalOptions = LayoutOptions.FillAndExpand,
+				VerticalOptions = LayoutOptions.FillAndExpand,
 				Padding = 1,
 			};
 
@@ -88,59 +85,77 @@ namespace Calender
 			CurrentDayOfTheWeek = new DateTime(CurrentYear, CurrentMonth, 1).DayOfWeek;
 			CurrentNoOfDaysInAMonth = DateTime.DaysInMonth(CurrentYear, CurrentMonth);
 
-
 			LoadCalender();
-
-
 		}
 
 		public void LoadCalender()
 		{
-			//Grid MonthAndYear = new Grid() { 
-			//	//HorizontalOptions = LayoutOptions.FillAndExpand, 
-			//	//VerticalOptions = LayoutOptions.Start, 
-			//	BackgroundColor = Color.Purple };
-			//MonthAndYear.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Auto) });
-			//MonthAndYear.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Auto) });
-			//MonthAndYear.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Auto) });
-
-
-
-
-			CalenderViewControl = new Grid() { BackgroundColor = Color.Red, 
-				HorizontalOptions = LayoutOptions.FillAndExpand, 
-				//VerticalOptions = LayoutOptions.Start 
+			CalenderViewControl = new Grid()
+			{
+				BackgroundColor = Color.Gray,
+				ColumnSpacing = 2,
+				RowSpacing = 2,
+				HorizontalOptions = LayoutOptions.FillAndExpand,
 			};
-			var monthLabel = new Label() { Text = CurrentMonth.ToString(), HorizontalOptions = LayoutOptions.Center, VerticalOptions = LayoutOptions.Center, };
-			CalenderViewControl.Children.Add(monthLabel, 0, 0);
-			var yearLabel = new Label() { Text = CurrentYear.ToString(), HorizontalOptions = LayoutOptions.Center, VerticalOptions = LayoutOptions.Center, };
-			CalenderViewControl.Children.Add(yearLabel, 1, 0);
 
-			//CalenderViewControl.RowDefinitions.Add(new RowDefinition { Height = new GridLength(0, GridUnitType.Auto) });
-			//CalenderViewControl.RowDefinitions.Add(new RowDefinition { Height = new GridLength(0, GridUnitType.Auto) });
-			//CalenderViewControl.RowDefinitions.Add(new RowDefinition { Height = new GridLength(0, GridUnitType.Auto) });
-			//CalenderViewControl.RowDefinitions.Add(new RowDefinition { Height = new GridLength(0, GridUnitType.Auto) });
-			//CalenderViewControl.RowDefinitions.Add(new RowDefinition { Height = new GridLength(0, GridUnitType.Auto) });
-			//CalenderViewControl.RowDefinitions.Add(new RowDefinition { Height = new GridLength(0, GridUnitType.Auto) });
-			//CalenderViewControl.RowDefinitions.Add(new RowDefinition { Height = new GridLength(0, GridUnitType.Auto) });
+			string[] monthNames = System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.MonthNames;
+			var curMonthName = monthNames[CurrentMonth - 1];
 
-			var weekDay = new Label() { Text = "Sun", HorizontalOptions = LayoutOptions.Center, VerticalOptions = LayoutOptions.Center, };
-			CalenderViewControl.Children.Add(weekDay, 0, 1);
+			var rightSwipe = new Image() { Source = "Right.png", HeightRequest = 30, WidthRequest = 30, BackgroundColor = Color.White };
+			var leftSwipe = new Image() { Source = "Left.png", HeightRequest=30, WidthRequest =30, BackgroundColor =Color.White, };
+
+			TapGestureRecognizer rightTap = new TapGestureRecognizer();
+			rightTap.Tapped += Gi_SwipeLeft;
+			rightSwipe.GestureRecognizers.Add(rightTap);
+
+			TapGestureRecognizer leftTap = new TapGestureRecognizer();
+			leftTap.Tapped += Gi_SwipeRight;
+			leftSwipe.GestureRecognizers.Add(leftTap);
+
+			CalenderViewControl.Children.Add(leftSwipe, 0, 0);
+
+			var monthLabel = new Label() { Text = curMonthName.ToString() + " " + CurrentYear.ToString(), HorizontalOptions = LayoutOptions.Center, VerticalOptions = LayoutOptions.CenterAndExpand, };
+			var stack = new StackLayout() { BackgroundColor = Color.White, HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand };
+			stack.Children.Add(monthLabel);
+			CalenderViewControl.Children.Add(stack, 1, 0);
+			Grid.SetColumnSpan(stack, 5);
+
+			CalenderViewControl.Children.Add(rightSwipe, 6, 0);	
+
+			var weekDay = new Label() { Text = "Sun", TextColor = Color.Red, HorizontalOptions = LayoutOptions.Center, VerticalOptions = LayoutOptions.Center, };
+			stack = new StackLayout() { BackgroundColor = Color.White, HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand };
+			stack.Children.Add(weekDay);
+			CalenderViewControl.Children.Add(stack, 0, 1);
+
 			weekDay = new Label() { Text = "Mon", HorizontalOptions = LayoutOptions.Center, VerticalOptions = LayoutOptions.Center, };
-			CalenderViewControl.Children.Add(weekDay, 1, 1);
-			weekDay = new Label() { Text = "Tue", HorizontalOptions = LayoutOptions.Center, VerticalOptions = LayoutOptions.Center, };
-			CalenderViewControl.Children.Add(weekDay, 2, 1);
-			weekDay = new Label() { Text = "Wed", HorizontalOptions = LayoutOptions.Center, VerticalOptions = LayoutOptions.Center, };
-			CalenderViewControl.Children.Add(weekDay, 3, 1);
-			weekDay = new Label() { Text = "Thu", HorizontalOptions = LayoutOptions.Center, VerticalOptions = LayoutOptions.Center, };
-			CalenderViewControl.Children.Add(weekDay, 4, 1);
-			weekDay = new Label() { Text = "Fri", HorizontalOptions = LayoutOptions.Center, VerticalOptions = LayoutOptions.Center, };
-			CalenderViewControl.Children.Add(weekDay, 5, 1);
-			weekDay = new Label() { Text = "Sat", HorizontalOptions = LayoutOptions.Center, VerticalOptions = LayoutOptions.Center, };
-			CalenderViewControl.Children.Add(weekDay, 6, 1);
+			stack = new StackLayout() { BackgroundColor = Color.White, HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand };
+			stack.Children.Add(weekDay);
+			CalenderViewControl.Children.Add(stack, 1, 1);
 
-			//MonthAndYear.Children.Add(CalenderViewControl, 0, 2);
-			//Grid.SetColumnSpan(CalenderViewControl, 2);
+			weekDay = new Label() { Text = "Tue", HorizontalOptions = LayoutOptions.Center, VerticalOptions = LayoutOptions.Center, };
+			stack = new StackLayout() { BackgroundColor = Color.White, HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand };
+			stack.Children.Add(weekDay);
+			CalenderViewControl.Children.Add(stack, 2, 1);
+
+			weekDay = new Label() { Text = "Wed", HorizontalOptions = LayoutOptions.Center, VerticalOptions = LayoutOptions.Center, };
+			stack = new StackLayout() { BackgroundColor = Color.White, HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand };
+			stack.Children.Add(weekDay);
+			CalenderViewControl.Children.Add(stack, 3, 1);
+
+			weekDay = new Label() { Text = "Thu", HorizontalOptions = LayoutOptions.Center, VerticalOptions = LayoutOptions.Center, };
+			stack = new StackLayout() { BackgroundColor = Color.White, HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand };
+			stack.Children.Add(weekDay);
+			CalenderViewControl.Children.Add(stack, 4, 1);
+
+			weekDay = new Label() { Text = "Fri", HorizontalOptions = LayoutOptions.Center, VerticalOptions = LayoutOptions.Center, };
+			stack = new StackLayout() { BackgroundColor = Color.White, HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand };
+			stack.Children.Add(weekDay);
+			CalenderViewControl.Children.Add(stack, 5, 1);
+
+			weekDay = new Label() { Text = "Sat", HorizontalOptions = LayoutOptions.Center, VerticalOptions = LayoutOptions.Center, };
+			stack = new StackLayout() { BackgroundColor = Color.White, HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand };
+			stack.Children.Add(weekDay);
+			CalenderViewControl.Children.Add(stack, 6, 1);
 
 			CurrentDay = (CurrentMonth == DateTime.Now.Month && CurrentYear == DateTime.Now.Year) ? DateTime.Now.Day : 0;
 			var startDaytoPrintInCalender = -1;
@@ -193,25 +208,25 @@ namespace Calender
 						{
 							startDaySelected = true;
 						}
-						else
-						{
-							continue;
-						}
 					}
-
-					if (startDaySelected)
+					else
 					{
-						if (day > CurrentNoOfDaysInAMonth)
-						{
-							break;
-						}
-
-						frame = new Frame() { HasShadow = false, Padding = 0, BackgroundColor = CurrentDay == day ? Color.Gray : Color.Transparent, HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand };
-						dateLabel = new Label() { Text = (day).ToString(), FontSize = 18, FontAttributes = FontAttributes.Bold, VerticalOptions = LayoutOptions.Center, HorizontalOptions = LayoutOptions.Center };
-						frame.Content = dateLabel;
-						CalenderViewControl.Children.Add(frame, j, i);
 						day++;
 					}
+
+					if (day > CurrentNoOfDaysInAMonth && j == 0)
+					{
+						break;
+					}
+
+					frame = new Frame() { HasShadow = false, Padding = 0, BackgroundColor = CurrentDay == day ? Color.Gray : Color.Transparent, HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand };
+					dateLabel = new Label() { Text = startDaySelected && day <= CurrentNoOfDaysInAMonth ? (day).ToString() : string.Empty, TextColor = j == 0 ? Color.Red : Color.Default,  FontSize = 18, FontAttributes = FontAttributes.Bold, VerticalOptions = LayoutOptions.CenterAndExpand, HorizontalOptions = LayoutOptions.CenterAndExpand };
+					frame.Content = dateLabel;
+
+					stack = new StackLayout() { BackgroundColor = CurrentDay == day ? Color.FromHex("bf3122") : Color.White, HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand };
+					stack.Children.Add(dateLabel);
+
+					CalenderViewControl.Children.Add(stack, j, i);
 				}
 			}
 			gi.Content = CalenderViewControl;
